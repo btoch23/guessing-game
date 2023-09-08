@@ -17,13 +17,12 @@
     <div class="container d-flex justify-content-center">
         <button id="start" type="button" class="btn"
             style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 3.5rem; --bs-btn-font-size: 2rem;"
-            onclick="runGame(), swapBtns(), disabled = true">START</button>
+            onclick="runGame(), enable()">START</button>
     </div>
     <div class="container d-flex justify-content-center">
         <button id="reset" type="button" class="btn"
-            style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: 2rem" onclick="resets()"
-            hidden="true">PLAY
-            AGAIN</button>
+            style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.5rem"
+            onclick="resets(), disabled=true" disabled="true">RESET</button>
     </div>
 
 

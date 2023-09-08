@@ -1,8 +1,8 @@
 const GUESSES = [];
 const RESET = document.getElementById('reset');
 
-function swapBtns() {
-    RESET.hidden = false;
+function enable() {
+    RESET.disabled = false;
 }
 
 function runGame() {
@@ -81,6 +81,6 @@ function checkGuess(guess, target){
 
 function resets() {
     GUESSES.length = 0;
-    runGame();
+    alert('Game has been reset! Click start to play again!');
 }
 
