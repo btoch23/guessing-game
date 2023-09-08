@@ -1,0 +1,44 @@
+.container {
+    padding: .5em;
+}
+
+span {
+    color: #e63946;
+}
+
+#title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #f1faee;
+    background-color: #1d3557;
+}
+
+#start {
+    letter-spacing: .75rem;
+    color: #1d3557;
+    border: 3px solid #457b9d;
+    background-color: #a8dadc;
+    border-radius: 3rem;
+    transition: background-color .2s, color .2s, transform .25s;
+    margin-bottom: .75rem;
+    margin-top: 1rem;
+}
+
+#start:hover {
+    background-color: #457b9d;
+    color: #f1faee;
+}
+
+#reset {
+    letter-spacing: .25rem;
+    color: #1d3557;
+    border: 1px solid #457b9d;
+    border-radius: 10rem;
+    transition: background-color .2s, border-color .2s, color .2s, transform .25s;
+}
+
+#reset:hover {
+    background-color: #e63946;
+    border-color: #e63946;
+    color: #f1faee;
+}
