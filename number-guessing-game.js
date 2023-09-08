@@ -1,5 +1,6 @@
 const GUESSES = [];
 const RESET = document.getElementById('reset');
+const START = document.getElementById('start');
 
 function enable() {
     RESET.disabled = false;
@@ -10,7 +11,7 @@ function runGame() {
     let guess;
     let correct = false;
     let numTries = 0;
-    let difficulty = prompt('Please select a difficulty level: easy, medium, or hard!').toLowerCase();
+    let difficulty = prompt('Please select a difficulty level:\n \neasy, medium, or hard!\n').toLowerCase();
     if (difficulty === 'easy' || difficulty === 'e') {
         target = Math.floor(Math.random() * 10 + 1);
         do {
@@ -68,19 +69,19 @@ function checkGuess(guess, target){
         alert('Please enter a number between 1 and 100!');
     } else if (guess > target) {
         GUESSES.push(guess);
-        alert(`Your number is too high! Try again! So far you've guessed these numbers: ${GUESSES.join(', ')}.`);
+        alert(`Your number is too high! Try again!\n \nSo far you've guessed these numbers:\n \n${GUESSES.join(', ')}`);
     } else if (guess < target) {
         GUESSES.push(guess);
-        alert(`Your number is too low! Try again! So far you've guessed these numbers: ${GUESSES.join(', ')}.`);
+        alert(`Your number is too low! Try again!\n \n So far you've guessed these numbers:\n \n ${GUESSES.join(', ')}`);
     } else {
         correct = true;
     }
     return correct;
 }
 
-
 function resets() {
     GUESSES.length = 0;
-    alert('Game has been reset! Click start to play again!');
+    START.disabled = false;
+    alert('Game has been reset!\n \nClick start to play again!');
 }
 
